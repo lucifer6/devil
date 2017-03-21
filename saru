@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "Enter two numbers:"
+read a b
+c=$((a*b))
+while [ $b -ne 0 ]
+do
+t=$a
+b=$((a%b))
+a=$t
+done
+echo "gcd=$a"
+lcm=$((c/a))
+echo "lcm=$lcm"
